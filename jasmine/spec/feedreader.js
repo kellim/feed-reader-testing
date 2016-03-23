@@ -52,19 +52,24 @@ $(function() {
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
-
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
+    /* "The menu" test suite */
+    describe('The menu', function() {
+        /* This test ensures the menu element is
+         * hidden by default. The menu is hidden
+         * by adding the class menu-hidden to the
+         * body, and it is removed by removing that
+         * class from the body.
          */
+         it('should be hidden by default', function() {
+             expect($('body')).toHaveClass('menu-hidden');
+         });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+    });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
