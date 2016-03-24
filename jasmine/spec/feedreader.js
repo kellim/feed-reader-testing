@@ -110,21 +110,18 @@ $(function() {
                 done();
             });
         });
-        afterEach(function() {
-            expect(feed1Content).toBeDefined();
-            expect(feed2Content).toBeDefined();
-            expect(feed1Content).not.toBe(feed2Content);
-        });
        /* This test ensures when a new feed is loaded by the asynchronous
         * loadFeed function that the content actually changes. It is
         * important to check that both feeds are defined before
-        * before comparing them. The expects are in afterEach() because
-        * it will be called after this asynchronous function (and the one
-        * before it in beforeEach()) are done executing.
+        * before comparing them.
         */
         it('should have different content', function(done) {
             loadFeed(1, function() {
                 feed2Content = $('.feed').html();
+
+                expect(feed1Content).toBeDefined();
+                expect(feed2Content).toBeDefined();
+                expect(feed1Content).not.toBe(feed2Content);
                 done();
             });
         });
