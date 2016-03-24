@@ -79,23 +79,33 @@ $(function() {
 
             // Does the menu display when clicked again
             expect($('body')).toHaveClass('menu-hidden');
-
         });
     });
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* "Initial Entries" test suite */
+    describe('Initial Entries', function() {
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
 
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
-         */
+    /* This test ensures when the loadFeed function is called and
+     * completes its work, there is at least a single .entry element
+     * within the .feed container. Because loadFeed() is asynchronous,
+     * this test requires the use of Jasmine's beforeEach and
+     * asynchronous done() function.
+     */
+        it('should have at least one .entry element in the .feed container', function() {
+            var entryLen = $('.feed .entry').length;
+              expect(entryLen).toBeGreaterThan(0);
+        });
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection"
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
+    /* TODO: Write a test that ensures when a new feed is loaded
+     * by the loadFeed function that the content actually changes.
+     * Remember, loadFeed() is asynchronous.
+     */
+
+
 }());
