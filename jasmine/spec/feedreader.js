@@ -144,7 +144,7 @@ $(function() {
         * purple that the background color for .slide-menu changes
         * in css to #8a2be2.
         */
-        it('should have a purple slide menu', function() {
+        xit('should have a purple slide menu', function() {
             expect($('.slide-menu')).toHaveCss({"background": "#8a2be2"});
         });
 
@@ -153,7 +153,7 @@ $(function() {
         * purple that the background color for the .header
         * changes in css to #8a2be2.
         */
-        it('should have a purple header', function() {
+        xit('should have a purple header', function() {
             expect($('.header')).toHaveCss({"background" : "#8a2be2"});
         });
     });
