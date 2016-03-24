@@ -72,12 +72,12 @@ $(function() {
             var spyEvent = spyOnEvent(menuIcon, 'click');
             $(menuIcon).trigger('click');
 
-            // Does the menu display when clicked
+            /* Does the menu display when clicked */
             expect($('body')).not.toHaveClass('menu-hidden');
 
             $(menuIcon).trigger('click');
 
-            // Does the menu display when clicked again
+            /* Does the menu display when clicked again */
             expect($('body')).toHaveClass('menu-hidden');
         });
     });
@@ -88,24 +88,45 @@ $(function() {
             loadFeed(0, done);
         });
 
-    /* This test ensures when the loadFeed function is called and
-     * completes its work, there is at least a single .entry element
-     * within the .feed container. Because loadFeed() is asynchronous,
-     * this test requires the use of Jasmine's beforeEach and
-     * asynchronous done() function.
-     */
+        /* This test ensures when the loadFeed function is called and
+         * completes its work, there is at least a single .entry element
+         * within the .feed container. Because loadFeed() is asynchronous,
+         * this test requires the use of Jasmine's beforeEach and
+         * asynchronous done() function.
+         */
         it('should have at least one .entry element in the .feed container', function() {
             var entryLen = $('.feed .entry').length;
               expect(entryLen).toBeGreaterThan(0);
         });
     });
 
-    /* TODO: Write a new test suite named "New Feed Selection"
+    /* "New Feed Selection" test suite */
+    describe('New Feed Selection', function() {
+        var feed1Content, feed2Content;
 
-    /* TODO: Write a test that ensures when a new feed is loaded
-     * by the loadFeed function that the content actually changes.
-     * Remember, loadFeed() is asynchronous.
-     */
-
-
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                feed1Content = $('.feed').html();
+                done();
+            });
+        });
+        afterEach(function() {
+            expect(feed1Content).toBeDefined();
+            expect(feed2Content).toBeDefined();
+            expect(feed1Content).not.toBe(feed2Content);
+        });
+       /* This test ensures when a new feed is loaded by the asynchronous
+        * loadFeed function that the content actually changes. It is
+        * important to check that both feeds are defined before
+        * before comparing them. The expects are in afterEach() because
+        * it will be called after this asynchronous function (and the one
+        * before it in beforeEach()) are done executing.
+        */
+        it('should have different content', function(done) {
+            loadFeed(1, function() {
+                feed2Content = $('.feed').html();
+                done();
+            });
+        });
+    });
 }());
