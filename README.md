@@ -2,14 +2,19 @@
 
 In this project, Udacity provided a web-based application that reads RSS feeds. It has Jasmine included and I completed the tests that were originally TODOs and added an additional test for future functionality. The original project is at http://github.com/udacity/frontend-nanodegree-feedreader. 
 
-# Running the project
+## Viewing the Project 
+### View the Project Online
+You can view the project results online at http://kellim.github.io/feed-reader-testing
 
+### Download the project
 * Click the `Download Zip` button to download the project. 
-* Open `index.html` which currently has Jasmine included at the bottom for convenience.
+* Open `index.html` which currently has Jasmine included at the bottom for convenience. 
+
+Note: As mentioned below, all the tests pass except the last 2 which are for functionality that is not implemented yet. 
 
 ## About the Tests
 
-The tests I wrote live in the Jasmine Spec file at *./jasmine/spec/feedreader.js*.
+The tests I wrote live in the Jasmine Spec file at */jasmine/spec/feedreader.js*.
 Tests were created for the TODOs to:
 * Loop through each feed in the allFeeds object and ensure it has a URL defined and that the URL is not empty.
 * Loop through each feed in the allFeeds object and ensure it has a name defined and that the name is not empty.
