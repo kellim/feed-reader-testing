@@ -31,6 +31,6 @@ I created an additional Test Suite called 'Site Color' with two tests to ensure 
 * [Jasmine Documentation (GitHub)](http://jasmine.github.io/)
 * [JavaScript Testing with Jasmine Video Tutorials (YouTube)](https://www.youtube.com/playlist?list=PLOxOmO43E6Jt0SruKGxtZs-W3PJN90G_a)
 * [JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans) - the Koans use Jasmine to teach JavaScript concepts and are good Jasmine Practice. They go through some of the Koans in the JavaScript Testing with Jasmine Video Tutorials on YouTube.
-* [Sublime Jasmine(GitHub)](https://github.com/NicoSantangelo/sublime-jasmine)
+* [Sublime Jasmine (GitHub)](https://github.com/NicoSantangelo/sublime-jasmine)
 * [jasmine-jquery (GitHub)](https://github.com/velesin/jasmine-jquery)
 * [Testing DOM Events Using jQuery and Jasmine 2.0 (htmlgoodies.com)](http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html)
