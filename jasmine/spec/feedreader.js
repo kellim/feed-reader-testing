@@ -26,7 +26,6 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
         /* This test loops through each feed in the allFeeds object
          * and ensures it has a URL defined and that the URL is not
          * empty.
@@ -37,7 +36,6 @@ $(function() {
                 expect(feed.url.length).not.toBe(0);
             });
          });
-
 
         /* This test loops through each feed in the allFeeds object
          * and ensures it has a name defined and that the name is not
@@ -51,8 +49,9 @@ $(function() {
          });
     });
 
-
-    /* "The menu" test suite */
+    /* "The menu" test suite. The tests in this suite use jasmine-jquery
+     * for '.toHaveClass()'
+     */
     describe('The menu', function() {
         /* This test ensures the menu element is hidden by default.
          * The menu is hidden by adding the class menu-hidden to the
@@ -110,6 +109,7 @@ $(function() {
                 done();
             });
         });
+
        /* This test ensures when a new feed is loaded by the asynchronous
         * loadFeed function that the content actually changes. It is
         * important to check that both feeds are defined before
@@ -124,6 +124,37 @@ $(function() {
                 expect(feed1Content).not.toBe(feed2Content);
                 done();
             });
+        });
+    });
+
+   /* "Site Color" test suite - Extra test for project for functionality
+    * not yet implemented where you can click on a link to change the
+    * background color of the site to purple. The tests use jasmine-jquery
+    * for '.toHaveCss()'
+    */
+    describe('Site Color', function() {
+        beforeEach(function(done) {
+            var changeToPurple = $('.purple-link');
+            var spyEvent = spyOnEvent(changeToPurple, 'click');
+            $(changeToPurple).trigger('click');
+        });
+
+       /* This test ensures that when a visitor clicks on a link
+        * with class purple-link to change background color to
+        * purple that the background color for .slide-menu changes
+        * in css to #8a2be2.
+        */
+        it('should have a purple slide menu', function() {
+            expect($('.slide-menu')).toHaveCss({"background": "#8a2be2"});
+        });
+
+       /* This test ensures that when a visitor clicks on a link
+        * with class purple-link to change background color to
+        * purple that the background color for the .header
+        * changes in css to #8a2be2.
+        */
+        it('should have a purple header', function() {
+            expect($('.header')).toHaveCss({"background" : "#8a2be2"});
         });
     });
 }());
