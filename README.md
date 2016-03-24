@@ -1,6 +1,6 @@
 # Project Overview
 
-In this project, Udacity provided a web-based application that reads RSS feeds. It has Jasmine included and I completed the tests that were originally TODOs and added an additional test for future functionality. The original project is at http://github.com/udacity/frontend-nanodegree-feedreader. 
+In this project, Udacity provided a web-based application that reads RSS feeds. It has Jasmine included and I completed the tests that were originally TODOs and added an additional test for future functionality. The original project is at http://github.com/udacity/frontend-nanodegree-feedreader and it is a part of Udacity's [Front-end Web Developer Nanodegree](https://www.udacity.com/wiki/nd001)
 
 ## Viewing the Project 
 ### View the Project Online
