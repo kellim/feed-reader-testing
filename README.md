@@ -10,7 +10,7 @@ You can view the project results online at http://kellim.github.io/feed-reader-t
 * Click the `Download Zip` button to download the project. 
 * Open `index.html` which currently has Jasmine included at the bottom for convenience. 
 
-Note: As mentioned below, all the tests pass except the last 2 which are for functionality that is not implemented yet. 
+Note: As mentioned below, all the tests pass except the last 2 which are marked as pending for functionality that is not implemented yet.
 
 ## About the Tests
 
@@ -23,7 +23,7 @@ Tests were created for the TODOs to:
 * Ensure when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container. Note: *loadFeed() is asynchronous so this test and the next one use Jasmine's beforeEach and asynchronous done() function.*
 * Ensure when a new feed is loaded by the asynchronous loadFeed function that the content actually changes.
 
-I created an additional Test Suite called 'Site Color' with two tests to ensure that when a visitor clicks a link to change the site background color to purple that it acutally updates the sliding sidebar menu and the header with the css to change the background color to the new purple color. These are the only 2 tests that will currently fail because the site does not have the functionality to change background color yet. The test failures are intended because in test-driven development, you write the tests first, they fail, and then you update your code so they pass the tests.
+I created an additional Test Suite called 'Site Color' with two tests to ensure that when a visitor clicks a link to change the site background color to purple that it acutally updates the sliding sidebar menu and the header with the css to change the background color to the new purple color. These are the only 2 tests that will currently fail because the site does not have the functionality to change background color yet. For that reason, I used xit to mark the tests as pending so they won't run. 
 
 ## Resources
 
