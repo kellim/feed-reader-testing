@@ -4,7 +4,7 @@ In this project, Udacity provided a web-based application that reads RSS feeds. 
 
 ## Viewing the Project 
 ### View the Project Online
-You can view the project results online at http://kellim.github.io/feed-reader-testing
+You can view the project results online at http://kellimb.github.io/feed-reader-testing
 
 ### Download the project
 * Click the `Download Zip` button to download the project. 
